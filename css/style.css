@@ -1,0 +1,127 @@
+
+body{
+	font-size: 24px;
+}
+nav{
+	background-color: #eee;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 4px solid blue;
+}
+
+@media screen and (max-width: 500px){
+	nav{
+		flex-direction: column;
+	}
+	nav div{
+		flex-direction: column;
+	}
+}
+
+nav img{
+	width: 400px;
+	height: auto;
+}
+nav div{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	min-width: 400px;
+}
+nav a{	
+	text-decoration: none;
+}
+
+section{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+section article{
+	width: 860px;
+	border: 4px solid #aaa;
+	margin: 12px;
+	padding: 8px;
+	border-radius: 24px 0px 24px 0px;
+
+}
+
+section article *{
+	margin: 8px;
+}
+
+section article .contenue{
+	display: flex;
+}
+
+section article div .img{
+	width: 50%;
+}
+
+section article div .img img{
+	width: 100%;
+	border-radius: 24px 0px 24px 0px;
+}
+
+section article .description{
+	margin: 4px;
+	width: 50%;
+}
+
+@media screen and (max-width: 860px){
+	section article{
+		min-width: 400px;
+	}
+	section article .contenue{
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	section article div .img{
+		width: 100%;
+	}
+
+	section article .description{
+		width: 100%;
+	}
+}
+/* Column container */
+.row {  
+	display: flex;
+	flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+	flex: 1;
+	background-color: #f1f1f1;
+	padding: 20px;
+	text-align: center
+  }
+  .side img{
+	width:300px;
+  }
+  
+  /* Main column */
+  .main {
+	flex: 2;
+	background-color: white;
+	padding: 20px;
+
+  }
+  .main img{
+	  width: 100%;
+  }
+  
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 860px) {
+	.side {width: 100%;}
+	.main {width: 100%;flex: 1;}
+
+}
